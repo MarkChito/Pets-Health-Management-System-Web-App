@@ -52,3 +52,26 @@
     cursor: not-allowed;
     pointer-events: all !important;
 }
+
+.zoom-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.zoom-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.zoom-container:hover img {
+    transform: scale(1.2);
+}
+
+.link_pets {
+    text-decoration: none;
+}
+
+.link_pets:hover {
+    text-decoration: none;
+}

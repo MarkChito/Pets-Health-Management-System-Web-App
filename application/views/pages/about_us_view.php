@@ -108,13 +108,13 @@
         <h1 class="display-4 m-0">Meet Our <span class="text-primary">Team Member</span></h1>
     </div>
     <div class="row">
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-6">
             <div class="team card position-relative overflow-hidden border-0 mb-4">
                 <img class="card-img-top lazy" data-src="dist/img/team-1.jpg" alt="">
                 <div class="card-body text-center p-0">
                     <div class="team-text d-flex flex-column justify-content-center bg-light">
-                        <h5>Mollie Ross</h5>
-                        <i>Founder & CEO</i>
+                        <h5>Nicolas, Kathline A.</h5>
+                        <i>Group Leader & Documentation</i>
                     </div>
                     <div class="team-social d-flex align-items-center justify-content-center bg-dark">
                         <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
@@ -125,13 +125,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-6">
             <div class="team card position-relative overflow-hidden border-0 mb-4">
                 <img class="card-img-top lazy" data-src="dist/img/team-2.jpg" alt="">
                 <div class="card-body text-center p-0">
                     <div class="team-text d-flex flex-column justify-content-center bg-light">
-                        <h5>Jennifer Page</h5>
-                        <i>Chef Executive</i>
+                        <h5>Capistrano, Dan Marshall D.</h5>
+                        <i>Programmer and Design</i>
                     </div>
                     <div class="team-social d-flex align-items-center justify-content-center bg-dark">
                         <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
@@ -142,13 +142,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6">
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
             <div class="team card position-relative overflow-hidden border-0 mb-4">
                 <img class="card-img-top lazy" data-src="dist/img/team-3.jpg" alt="">
                 <div class="card-body text-center p-0">
                     <div class="team-text d-flex flex-column justify-content-center bg-light">
-                        <h5>Kate Glover</h5>
-                        <i>Doctor</i>
+                        <h5>Perillo, Reynaldo Jr T.</h5>
+                        <i>Documentation & Designer</i>
                     </div>
                     <div class="team-social d-flex align-items-center justify-content-center bg-dark">
                         <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
@@ -159,13 +161,30 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4">
             <div class="team card position-relative overflow-hidden border-0 mb-4">
                 <img class="card-img-top lazy" data-src="dist/img/team-4.jpg" alt="">
                 <div class="card-body text-center p-0">
                     <div class="team-text d-flex flex-column justify-content-center bg-light">
-                        <h5>Lilly Fry</h5>
-                        <i>Trainer</i>
+                        <h5>Ybañez, Nolito R.</h5>
+                        <i>Programmer</i>
+                    </div>
+                    <div class="team-social d-flex align-items-center justify-content-center bg-dark">
+                        <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="team card position-relative overflow-hidden border-0 mb-4">
+                <img class="card-img-top lazy" data-src="dist/img/team-5.jpg" alt="">
+                <div class="card-body text-center p-0">
+                    <div class="team-text d-flex flex-column justify-content-center bg-light">
+                        <h5>Guarin, Jomar V.</h5>
+                        <i>Designer</i>
                     </div>
                     <div class="team-social d-flex align-items-center justify-content-center bg-dark">
                         <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>

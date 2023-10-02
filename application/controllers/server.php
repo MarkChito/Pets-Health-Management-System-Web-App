@@ -370,7 +370,7 @@ class server extends CI_Controller
         $user_name = $this->input->post("register_pet_user_name");
         $user_image = $this->input->post("register_pet_user_image");
         $user_primary_key = $this->input->post("register_pet_user_primary_key");
-        $current_tab = $this->input->post("register_pet_current_tab");
+        $current_tab = $this->input->post("register_pet_user_current_tab");
 
         $date_posted = date("F d, Y - h:i A");
 
@@ -470,11 +470,13 @@ class server extends CI_Controller
         $email = $this->input->post("adopt_email");
         $mobile_number = $this->input->post("adopt_mobile_number");
         $address = $this->input->post("adopt_address");
+        $pet_primary_key = $this->input->post("adopt_pet_primary_key");
+        $pet_name = $this->input->post("adopt_pet_name");
         $type_of_pet = $this->input->post("adopt_type_of_pet");
-        $breed_preferences = $this->input->post("adopt_breed_preferences");
-        $age_preference = $this->input->post("adopt_age_preference");
-        $size_preference = $this->input->post("adopt_size_preference");
-        $gender_preference = $this->input->post("adopt_gender_preference");
+        $breed = $this->input->post("adopt_breed");
+        $gender = $this->input->post("adopt_gender");
+        $age = $this->input->post("adopt_age");
+        $weight = $this->input->post("adopt_weight");
         $type_of_residence = $this->input->post("adopt_type_of_residence");
         $ownership = $this->input->post("adopt_ownership");
         $availability_of_a_fenced_yard_or_outdoor_space = $this->input->post("adopt_availability_of_a_fenced_yard_or_outdoor_space");
@@ -485,7 +487,7 @@ class server extends CI_Controller
 
         $current_tab = $this->input->post("adopt_current_tab");
 
-        $this->model->MOD_ADOPT_A_PET($user_primary_key, $name, $email, $mobile_number, $address, $type_of_pet, $breed_preferences, $age_preference, $size_preference, $gender_preference, $type_of_residence, $ownership, $availability_of_a_fenced_yard_or_outdoor_space, $activity_level, $experience_with_pets, $compatibility_with_children_or_other_pets_in_the_household, $any_specific_considerations_or_requirements);
+        $this->model->MOD_ADOPT_A_PET($user_primary_key, $name, $email, $mobile_number, $address, $pet_primary_key, $pet_name, $type_of_pet, $breed, $gender, $age, $weight, $type_of_residence, $ownership, $availability_of_a_fenced_yard_or_outdoor_space, $activity_level, $experience_with_pets, $compatibility_with_children_or_other_pets_in_the_household, $any_specific_considerations_or_requirements);
 
         $this->session->set_userdata("alert", array(
             "title" => "Application Submitted!",
@@ -493,7 +495,7 @@ class server extends CI_Controller
             "alert_type" => "success"
         ));
 
-        header("Location: " . base_url() . $current_tab);
+        header("Location: " . base_url() . "available_pets");
     }
 
     public function report_missing_pet()

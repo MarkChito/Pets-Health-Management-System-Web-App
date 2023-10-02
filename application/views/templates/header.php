@@ -146,7 +146,7 @@ if ($this->session->userdata("primary_key")) {
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pets</a>
             <?php if ($this->session->userdata("primary_key")) : ?>
               <div class="dropdown-menu rounded-0 m-0">
-                <a href="pet_adoption_center" class="dropdown-item <?= defined("PET_ADOPTION_CENTER") ? PET_ADOPTION_CENTER : null ?>">Pet Adoption Center</a>
+                <a href="available_pets" class="dropdown-item <?= defined("AVAILABLE_PETS") ? AVAILABLE_PETS : (defined("PET_ADOPTION_CENTER") ? PET_ADOPTION_CENTER : null) ?>">Pet Adoption Center</a>
                 <a href="online_pet_health_assessment" class="dropdown-item <?= defined("ONLINE_PET_HEALTH_ASSESSMENT") ? ONLINE_PET_HEALTH_ASSESSMENT : null ?>">Online Pet Health Assessment</a>
                 <a href="registered_pets" class="dropdown-item <?= defined("REGISTERED_PETS") ? REGISTERED_PETS : null ?>">Registered Pets</a>
                 <a href="missing_pets" class="dropdown-item <?= defined("MISSING_PETS") ? MISSING_PETS : null ?>">Missing Pets</a>

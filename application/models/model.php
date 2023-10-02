@@ -90,6 +90,22 @@ class model extends CI_Model
 
         return $query->result();
     }
+    
+    public function MOD_AVAILABLE_PETS_DATA()
+    {
+        $sql = "SELECT * FROM `tbl_pethealthmanagement_pets` ORDER BY `primary_key` DESC";
+        $query = $this->db->query($sql);
+
+        return $query->result();
+    }
+    
+    public function MOD_GET_PET_DATA($pet_id)
+    {
+        $sql = "SELECT * FROM `tbl_pethealthmanagement_pets` WHERE `primary_key`=?";
+        $query = $this->db->query($sql, array($pet_id));
+
+        return $query->result();
+    }
 
     /*============================== INSERT QUERIES ==============================*/
     public function MOD_ADD_TO_NEWS_LETTER($name, $email)
@@ -134,11 +150,11 @@ class model extends CI_Model
         $this->db->query($sql, array($missing_pet_primary_key, $user_name, $user_image, $date, $time, $message));
     }
     
-    public function MOD_ADOPT_A_PET($user_primary_key, $name, $email, $mobile_number, $address, $type_of_pet, $breed_preferences, $age_preference, $size_preference, $gender_preference, $type_of_residence, $ownership, $availability_of_a_fenced_yard_or_outdoor_space, $activity_level, $experience_with_pets, $compatibility_with_children_or_other_pets_in_the_household, $any_specific_considerations_or_requirements)
+    public function MOD_ADOPT_A_PET($user_primary_key, $name, $email, $mobile_number, $address, $pet_primary_key, $pet_name, $type_of_pet, $breed, $gender, $age, $weight, $type_of_residence, $ownership, $availability_of_a_fenced_yard_or_outdoor_space, $activity_level, $experience_with_pets, $compatibility_with_children_or_other_pets_in_the_household, $any_specific_considerations_or_requirements)
     {
-        $sql = "INSERT INTO `tbl_pethealthmanagement_petadopters` (`user_primary_key`, `name`, `email`, `mobile_number`, `address`, `type_of_pet`, `breed_preferences`, `age_preference`, `size_preference`, `gender_preference`, `type_of_residence`, `ownership`, `availability_of_a_fenced_yard_or_outdoor_space`, `activity_level`, `experience_with_pets`, `compatibility_with_children_or_other_pets_in_the_household`, `any_specific_considerations_or_requirements`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO `tbl_pethealthmanagement_petadopters` (`user_primary_key`, `name`, `email`, `mobile_number`, `address`, `pet_primary_key`, `pet_name`, `type_of_pet`, `breed`, `gender`, `age`, `weight`, `type_of_residence`, `ownership`, `availability_of_a_fenced_yard_or_outdoor_space`, `activity_level`, `experience_with_pets`, `compatibility_with_children_or_other_pets_in_the_household`, `any_specific_considerations_or_requirements`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-        $this->db->query($sql, array($user_primary_key, $name, $email, $mobile_number, $address, $type_of_pet, $breed_preferences, $age_preference, $size_preference, $gender_preference, $type_of_residence, $ownership, $availability_of_a_fenced_yard_or_outdoor_space, $activity_level, $experience_with_pets, $compatibility_with_children_or_other_pets_in_the_household, $any_specific_considerations_or_requirements));
+        $this->db->query($sql, array($user_primary_key, $name, $email, $mobile_number, $address, $pet_primary_key, $pet_name, $type_of_pet, $breed, $gender, $age, $weight, $type_of_residence, $ownership, $availability_of_a_fenced_yard_or_outdoor_space, $activity_level, $experience_with_pets, $compatibility_with_children_or_other_pets_in_the_household, $any_specific_considerations_or_requirements));
     }
     
     public function MOD_ADD_MISSING_PET($date_posted, $user_primary_key, $user_name, $user_email, $user_image, $pet_name, $species, $breed, $age, $sex, $spayed_neutered, $last_seen_location, $last_seen_date, $last_seen_time, $additional_information, $image, $status)

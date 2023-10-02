@@ -45,54 +45,46 @@
             <!-- Adoption Preferences -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <strong class="card-title">2. Adoption Preferences</strong>
+                    <strong class="card-title">2. Pet Details</strong>
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-6 col-12">
+                        <div class="col-lg-4 col-12">
                             <div class="form-group">
-                                <label for="adopt_type_of_pet" class="col-form-label">Type of Pet (Dog, Cat, Bird, etc.)</label>
-                                <input type="text" class="form-control" id="adopt_type_of_pet" name="adopt_type_of_pet" required>
+                                <label for="adopt_pet_name" class="col-form-label">Pet Name</label>
+                                <input type="text" class="form-control" id="adopt_pet_name" name="adopt_pet_name" value="<?= $pet_name ? $pet_name : null ?>" readonly>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-12">
+                        <div class="col-lg-4 col-12">
                             <div class="form-group">
-                                <label for="adopt_breed_preferences" class="col-form-label">Breed Preferences (if any)</label>
-                                <input type="text" class="form-control" id="adopt_breed_preferences" name="adopt_breed_preferences" required>
+                                <label for="adopt_type_of_pet" class="col-form-label">Type of Pet (Dog, Cat, Bird, etc.)</label>
+                                <input type="text" class="form-control" id="adopt_type_of_pet" name="adopt_type_of_pet" value="<?= $species ? $species : null ?>" readonly>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="form-group">
+                                <label for="adopt_breed" class="col-form-label">Breed</label>
+                                <input type="text" class="form-control" id="adopt_breed" name="adopt_breed" value="<?= $breed ? $breed : null ?>" readonly>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-4 col-12">
                             <div class="form-group">
-                                <label for="adopt_age_preference" class="col-form-label">Age Preference</label>
-                                <select name="adopt_age_preference" id="adopt_age_preference" class="custom-select" required>
-                                    <option value="" disabled selected></option>
-                                    <option value="Young">Young</option>
-                                    <option value="Adult">Adult</option>
-                                    <option value="Senior">Senior</option>
-                                </select>
+                                <label for="adopt_gender" class="col-form-label">Gender</label>
+                                <input type="text" class="form-control" id="adopt_gender" name="adopt_gender" value="<?= $sex ? $sex : null ?>" readonly>
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="form-group">
-                                <label for="adopt_size_preference" class="col-form-label">Size Preference</label>
-                                <select name="adopt_size_preference" id="adopt_size_preference" class="custom-select" required>
-                                    <option value="" disabled selected></option>
-                                    <option value="Small">Small</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="Large">Large</option>
-                                </select>
+                                <label for="adopt_age" class="col-form-label">Age</label>
+                                <input type="text" class="form-control" id="adopt_age" name="adopt_age" value="<?= $age ? $age." Months" : null ?>" readonly>
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="form-group">
-                                <label for="adopt_gender_preference" class="col-form-label">Gender Preference</label>
-                                <select name="adopt_gender_preference" id="adopt_gender_preference" class="custom-select" required>
-                                    <option value="" disabled selected></option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
+                                <label for="adopt_weight" class="col-form-label">Weight</label>
+                                <input type="text" class="form-control" id="adopt_weight" name="adopt_weight" value="<?= $weight ? $weight." KG" : null ?>" readonly>
                             </div>
                         </div>
                     </div>
@@ -204,6 +196,7 @@
             </div>
 
             <input type="hidden" name="adopt_user_primary_key" value="<?= $this->session->userdata("primary_key") ? $this->session->userdata("primary_key") : null ?>">
+            <input type="hidden" name="adopt_pet_primary_key" value="<?= $pet_primary_key ? $pet_primary_key : null ?>">
             <input type="hidden" name="adopt_current_tab" value="<?= $this->session->userdata("current_tab") ? $this->session->userdata("current_tab") : null ?>">
 
             <button type="submit" class="btn btn-success w-100 py-2" name="adopt">Submit</button>

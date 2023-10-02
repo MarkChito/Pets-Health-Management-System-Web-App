@@ -102,15 +102,12 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-9">
-                                    <p><b> Nicolas, Kathline </b> - Leader</p>
-                                    <p><b> Capistrano, Dan Marshall </b> - Member</p>
-                                    <p><b> Guarin, Jomar </b> - Member</p>
-                                    <p><b> Perillo, Reynaldo Tebia </b> - Member</p>
-                                    <p><b> Ybanez Nilito, Jay-Ar </b> - Member</p>
-                                </div>
-                                <div class="col-3">
-                                    <img data-placement="right" class="img-fluid lazy" data-src="<?= Logo() ?>" alt="Logo">
+                                <div class="col-12">
+                                    <p><b> Nicolas, Kathline </b> - Group Leader & Documentation</p>
+                                    <p><b> Capistrano, Dan Marshall </b> - Programmer & Design</p>
+                                    <p><b> Perillo, Reynaldo Tebia </b> - Documentation & Designer</p>
+                                    <p><b> Guarin, Jomar </b> - Designer</p>
+                                    <p><b> Ybanez Nilito, Jay-Ar </b> - Programmer</p>
                                 </div>
                             </div>
                         </div>
@@ -1407,7 +1404,6 @@
             }
 
             function showPage_2(current_page_2) {
-
                 $("#timeline_loader_2").removeClass("d-none");
                 $(".timeline_2").addClass("d-none");
 
@@ -1685,7 +1681,6 @@
             }
 
             function update_account_verify_password(password, confirm_password) {
-
                 var error = 0;
 
                 if (password || confirm_password) {
@@ -1758,7 +1753,6 @@
             }
 
             function update_new_password_verify_password(password, confirm_password) {
-
                 var error = 0;
 
                 if (password || confirm_password) {
